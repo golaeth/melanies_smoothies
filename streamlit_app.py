@@ -34,6 +34,10 @@ if ingredients_list:
                 values ('""" + ingredients_string + """', '""" + name_on_order + """')"""
 
     time_to_insert = st.button('Submit Order')
+
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
     
     if time_to_insert and ingredients_string:
     
